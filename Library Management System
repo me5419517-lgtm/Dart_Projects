@@ -1,0 +1,44 @@
+class Book{
+  String name;
+  bool available;
+  Book(this.name,this.available);
+}
+class Library{
+  List<Book> bd=[];
+  void add_book(String name){
+   bd.add( Book(name,true)) ;
+  }
+  void Borrow_book(String name){
+    for(var a in bd){
+      if(a.name==name&&a.available){
+        a.available=false;
+      }
+    }
+  }
+  void return_book(String name){
+    for(var h in bd){
+      if(h.name==name&&!h.available){
+        h.available=true;
+      }
+    }
+  }
+  void Show(){
+    print ("The available is :");
+    for(var a in bd ){
+      if(a.available){
+        print(a.name);
+      }
+    }
+  }
+}
+main(){
+  Library L=Library();
+  L.add_book("Clean code");
+  L.add_book("Fairy tails");
+  L.add_book("Web Development");
+  L.Borrow_book("Clean code");
+  L.return_book("Clean code");
+  L.Show();
+
+}
+
