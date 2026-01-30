@@ -1,0 +1,22 @@
+class Student{
+  String name;
+  int id;
+  double grade;
+  Student(this.name,this.id,this.grade);
+}
+main(){
+  List<Student> s=[];
+  s.add( Student("Malak",46222,44.5));
+  s.add( Student("Jana",68271,88.9));
+  s.add( Student("Shahd",67669,33.4));
+  print("Students :");
+  for(var a in s){
+    print("Name : ${a.name},ID : ${a.id},Grade : ${a.grade}");
+  }
+  int id=46222;
+  for(var a in s){
+    if(a.id==id){
+      print("Found ${a.name}");
+    }
+  }
+}
