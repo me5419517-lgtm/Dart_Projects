@@ -1,0 +1,20 @@
+import 'dart:io';
+import 'dart:math';
+main(){
+  int num=Random().nextInt(20)+1;
+  int x=0;
+  int y=0;
+  print("Guss any Number(From 1 to 20 ):");
+  while(y!=num){
+    stdout.write("Guss Number :");
+    y=int.parse(stdin.readLineSync()!);
+    x++;
+    if(y>num){
+      print("Chose Lower Number");
+    } else if(y<num){
+      print("Chose Higher Number");
+    }else{
+      print ("You got it");
+    }
+  }
+}
