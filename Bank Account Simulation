@@ -1,0 +1,22 @@
+class Bank{
+  double balance=0;
+  void Deposit(double amount){
+    balance+=amount;
+  }
+  void withdraw(double amount){
+    if(amount<=balance){
+      balance-=amount;
+    }else{
+      print("Not Enough balance !");
+    }
+  }
+  void Check(){
+    print("Your balance is : $balance");
+  }
+}
+main(){
+  Bank b=Bank();
+  b.Deposit(122.5);
+  b.withdraw(2.5);
+  b.Check();
+}
